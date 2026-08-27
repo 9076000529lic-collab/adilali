@@ -17,15 +17,7 @@ export default function Home() {
 
         <ProductGrid />
 
-        <section className="statement" id="story">
-          <p className="eyebrow">OUR PHILOSOPHY</p>
-
-          <h2>
-            Designed to be lived in,
-            <br />
-            <em>not just looked at.</em>
-          </h2>
-        </section>
+        
 
         <Features />
       </main>

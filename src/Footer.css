@@ -1,0 +1,790 @@
+/* =========================================================
+   ALFAZEX PREMIUM E-COMMERCE FOOTER
+   ========================================================= */
+
+.site-footer {
+  position: relative;
+  width: 100%;
+  background: #f8f8f7;
+  color: #252525;
+  border-top: 1px solid #e8e6e2;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns:
+    1.35fr
+    0.85fr
+    1fr
+    1.45fr;
+
+  gap: 70px;
+
+  padding: 72px 52px 60px;
+}
+
+
+/* =========================================================
+   FOOTER COLUMN
+   ========================================================= */
+
+.footer-column {
+  min-width: 0;
+}
+
+.footer-column h3 {
+  margin: 0 0 27px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  letter-spacing: -0.01em;
+
+  color: #161616;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.footer-logo {
+  margin-bottom: 30px;
+}
+
+.footer-logo span {
+  display: inline-block;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 30px;
+  line-height: 1;
+
+  font-weight: 700;
+  letter-spacing: -0.07em;
+
+  color: #181818;
+
+  transition:
+    letter-spacing 0.4s ease,
+    transform 0.4s ease;
+}
+
+.footer-logo:hover span {
+  letter-spacing: -0.03em;
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.footer-contact {
+  margin-bottom: 18px;
+}
+
+.footer-contact p {
+  margin: 0 0 9px;
+
+  color: #686868;
+
+  font-size: 13px;
+  line-height: 1.8;
+
+  letter-spacing: 0;
+}
+
+.footer-contact strong {
+  color: #363636;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   GET DIRECTION
+   ========================================================= */
+
+.direction-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 2px;
+
+  color: #181818;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  padding-bottom: 5px;
+}
+
+.direction-link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background: #181818;
+
+  transform: scaleX(1);
+  transform-origin: left;
+
+  transition: transform 0.35s ease;
+}
+
+.direction-link span {
+  font-size: 15px;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.direction-link:hover::after {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.direction-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+   ========================================================= */
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 28px;
+}
+
+.footer-socials a {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #cfcfcd;
+  border-radius: 50%;
+
+  color: #222;
+  background: transparent;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: #151515;
+  color: #fff;
+  border-color: #151515;
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+   ========================================================= */
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.footer-links a {
+  position: relative;
+
+  width: max-content;
+
+  color: #666;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -3px;
+
+  width: 0;
+  height: 1px;
+
+  background: #222;
+
+  transition:
+    width 0.35s ease;
+}
+
+.footer-links a:hover {
+  color: #171717;
+  transform: translateX(3px);
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
+
+.newsletter-column {
+  max-width: 440px;
+}
+
+.newsletter-text {
+  max-width: 390px;
+
+  margin: -2px 0 28px;
+
+  color: #666;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   NEWSLETTER FORM
+   ========================================================= */
+
+.newsletter-form {
+  width: 100%;
+  height: 53px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #e0dedb;
+
+  background: #fff;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.newsletter-form:focus-within {
+  border-color: #999;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.newsletter-form input {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 100%;
+
+  padding: 0 17px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #222;
+
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.newsletter-form input::placeholder {
+  color: #9a9a9a;
+
+  transition: color 0.25s ease;
+}
+
+.newsletter-form input:focus::placeholder {
+  color: #c1c1c1;
+}
+
+
+/* =========================================================
+   SUBSCRIBE BUTTON
+   ========================================================= */
+
+.newsletter-form button {
+  height: calc(100% - 10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-right: 5px;
+
+  padding: 0 17px;
+
+  border: 0;
+
+  background: #080808;
+  color: #fff;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.newsletter-form button span {
+  font-size: 15px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #333;
+}
+
+.newsletter-form button:hover span {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   CURRENCY
+   ========================================================= */
+
+.currency {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 25px;
+
+  color: #454545;
+
+  font-size: 12px;
+}
+
+.india-flag {
+  font-size: 16px;
+}
+
+.currency-arrow {
+  margin-left: 2px;
+
+  font-size: 15px;
+
+  color: #333;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+  width: calc(100% - 104px);
+  max-width: 1296px;
+
+  margin: 0 auto;
+
+  min-height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #e5e3df;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   PAYMENT METHODS
+   ========================================================= */
+
+.payment-methods {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.payment-methods span {
+  width: 48px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #deddda;
+  border-radius: 3px;
+
+  background: #fff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.payment-methods span:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.payment-methods .visa {
+  color: #1434cb;
+  font-size: 12px;
+}
+
+.payment-methods .paypal {
+  color: #1261a0;
+  font-size: 17px;
+}
+
+.payment-methods .mastercard {
+  color: #222;
+  font-size: 18px;
+}
+
+.payment-methods .upi {
+  color: #555;
+}
+
+
+/* =========================================================
+   FLOATING REWARDS
+   ========================================================= */
+
+.rewards-button {
+  position: fixed;
+
+  right: 24px;
+  bottom: 20px;
+
+  z-index: 50;
+
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 23px 0 14px;
+
+  border: 0;
+  border-radius: 40px;
+
+  background: #050505;
+  color: #fff;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.2);
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.rewards-button:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.28);
+}
+
+.gift-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff;
+  color: #111;
+
+  font-size: 17px;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.rewards-button:hover .gift-icon {
+  transform: rotate(15deg) scale(1.08);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .footer-container {
+    grid-template-columns:
+      1.2fr
+      0.8fr
+      0.9fr
+      1.2fr;
+
+    gap: 35px;
+
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .footer-bottom {
+    width: calc(100% - 70px);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 55px 40px;
+
+    padding-top: 60px;
+  }
+
+  .newsletter-column {
+    max-width: 100%;
+  }
+
+  .newsletter-text {
+    max-width: 450px;
+  }
+
+  .footer-bottom {
+    width: calc(100% - 70px);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 45px;
+
+    padding: 55px 20px 45px;
+  }
+
+  .footer-brand-column {
+    padding-bottom: 5px;
+  }
+
+  .footer-logo span {
+    font-size: 27px;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 22px;
+
+    font-size: 15px;
+  }
+
+  .footer-links {
+    gap: 12px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .footer-contact p {
+    font-size: 12px;
+  }
+
+  .footer-socials {
+    margin-top: 24px;
+  }
+
+  .newsletter-text {
+    font-size: 12px;
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+  }
+
+  .newsletter-form {
+    height: 52px;
+  }
+
+  .newsletter-form input {
+    padding-left: 13px;
+
+    font-size: 11px;
+  }
+
+  .newsletter-form button {
+    padding: 0 11px;
+
+    font-size: 9px;
+
+    gap: 6px;
+  }
+
+  .footer-bottom {
+    width: calc(100% - 40px);
+
+    min-height: auto;
+
+    padding: 25px 0 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .payment-methods {
+    width: 100%;
+  }
+
+  .payment-methods span {
+    width: 45px;
+    height: 29px;
+  }
+
+  .rewards-button {
+    right: 14px;
+    bottom: 14px;
+
+    height: 50px;
+
+    padding-right: 17px;
+
+    font-size: 11px;
+  }
+
+  .gift-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .footer-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer-bottom {
+    width: calc(100% - 32px);
+  }
+
+  .newsletter-form button {
+    padding: 0 9px;
+  }
+
+  .newsletter-form button span {
+    display: none;
+  }
+
+  .rewards-button {
+    right: 10px;
+    bottom: 10px;
+  }
+
+}
