@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const categories = [
   {
-    name: "Sarees",
+    name: "Salwar Suits",
     image: "/products/product-1.jpg",
   },
   {
@@ -10,11 +10,11 @@ const categories = [
     image: "/products/product-2.jpg",
   },
   {
-    name: "Gharara",
+    name: "Salwar Suits",
     image: "/products/product-3.jpg",
   },
   {
-    name: "Dupattas",
+    name: "Salwar Suits",
     image: "/products/product-4.jpg",
   },
 ];
