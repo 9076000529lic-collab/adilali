@@ -4,6 +4,13 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 const slides = [
   {
     id: 1,
+    image: "/products/Home-4.png",
+    eyebrow: "SIGNATURE EDIT",
+    title: "GRACE",
+    subtitle: "BRAND OWNER",
+  },
+  {
+    id: 1,
     image: "/products/Home-1.png",
     eyebrow: "NEW LAUNCH",
     title: "RUPA BUTI",
@@ -30,12 +37,12 @@ const slides = [
     title: "GRACE",
     subtitle: "EFFORTLESSLY BEAUTIFUL",
   },
-   {
+  {
     id: 5,
-    image: "/products/Home-4.png",
-    eyebrow: "SIGNATURE EDIT",
-    title: "GRACE",
-    subtitle: "BRAND OWNER",
+    image: "/products/Home-1.png",
+    eyebrow: "NEW LAUNCH",
+    title: "RUPA BUTI",
+    subtitle: "PURE VISCOSE GEORGETTE SILK",
   },
 ];
 
