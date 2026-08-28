@@ -70,7 +70,7 @@ export default function Footer() {
             <a href="/">About Us</a>
             <a href="/">Contact Us</a>
             <a href="/">Blog</a>
-            <a href="/">Privacy Policy</a>
+            <a href="/privacy-policy">Privacy Policy</a>
             <a href="/">Shipping Policy</a>
             <a href="/">Refund Policy</a>
             <a href="/">Terms & Conditions</a>

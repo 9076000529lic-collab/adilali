@@ -1,14 +1,31 @@
 import React from "react";
 import products from "../../data/products";
+import { useCart } from "../../context/CartContext";
 
 const ProductGrid = () => {
-  return (
-    <section className="shop-section" id="shop">
+  const { addToCart } = useCart();
 
-      {/* Section Heading */}
+  const handleQuickAdd = (product) => {
+    const defaultSize =
+      product.sizes?.[0] || "S";
+
+    addToCart(product, defaultSize);
+  };
+
+  return (
+    <section
+      className="shop-section"
+      id="shop"
+    >
+      {/* =========================
+          SECTION HEADER
+      ========================= */}
+
       <div className="section-head">
         <div>
-          <p className="eyebrow">THE COLLECTION</p>
+          <p className="eyebrow">
+            THE COLLECTION
+          </p>
 
           <h2>
             Shop our <em>favourites.</em>
@@ -16,113 +33,164 @@ const ProductGrid = () => {
         </div>
 
         <p className="section-note">
-          Thoughtfully designed pieces made with comfort,
-          quality fabrics and timeless Indian craftsmanship.
+          Thoughtfully designed pieces made with
+          comfort, quality fabrics and timeless
+          Indian craftsmanship.
         </p>
       </div>
 
-      {/* Products */}
+      {/* =========================
+          PRODUCT GRID
+      ========================= */}
+
       <div className="product-grid">
 
-        {products.map((product) => (
-          <article className="product-card" key={product.id}>
+        {products.map((product) => {
 
-            {/* Product Image */}
-            <div className="product-image-wrap">
+          const discount =
+            product.oldPrice > product.price
+              ? Math.round(
+                  ((product.oldPrice -
+                    product.price) /
+                    product.oldPrice) *
+                    100
+                )
+              : 0;
 
-              <img
-                className="product-image"
-                src={product.image}
-                alt={product.name}
-              />
+          return (
+            <article
+              className="product-card"
+              key={product.id}
+            >
 
-              {/* Sale Badge */}
-              {product.oldPrice > product.price && (
-                <span className="product-badge">
-                  SALE
-                </span>
-              )}
+              {/* IMAGE */}
 
-              {/* Wishlist */}
-              <button
-                type="button"
-                className="wishlist"
-                aria-label={`Add ${product.name} to wishlist`}
-              >
-                <svg
-                  width="17"
-                  height="17"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div className="product-image-wrap">
+
+                <img
+                  className="product-image"
+                  src={product.image}
+                  alt={product.name}
+                />
+
+                {/* SALE */}
+
+                {discount > 0 && (
+                  <span className="product-badge">
+                    SALE
+                  </span>
+                )}
+
+                {/* WISHLIST */}
+
+                <button
+                  type="button"
+                  className="wishlist"
+                  aria-label="Add to wishlist"
                 >
-                  <path
-                    d="M20.84 4.61C20.3292 4.09922 19.7227 3.69405 19.0551 3.41764C18.3875 3.14123 17.7319 2.99899 17.07 3C15.5 3 14.01 3.8 13 5.09C11.99 3.8 10.5 3 8.93 3C7.27 3 5.69 3.69 4.52 4.86C2.16 7.22 2.16 11.05 4.52 13.41L13 21.89L21.48 13.41C23.84 11.05 23.84 7.22 21.48 4.86L20.84 4.61Z"
-                    stroke="currentColor"
-                    strokeWidth="1.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M20.84 4.61C20.33 4.1 19.72 3.69 19.06 3.42C18.39 3.14 17.73 3 17.07 3C15.5 3 14.01 3.8 13 5.09C11.99 3.8 10.5 3 8.93 3C7.27 3 5.69 3.69 4.52 4.86C2.16 7.22 2.16 11.05 4.52 13.41L13 21.89L21.48 13.41C23.84 11.05 23.84 7.22 21.48 4.86L20.84 4.61Z"
+                      stroke="currentColor"
+                      strokeWidth="1.4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
 
-              {/* Quick Add */}
-              <button
-                type="button"
-                className="quick-add"
-              >
-                <span>Quick Add</span>
-                <span>+</span>
-              </button>
+                {/* QUICK ADD */}
 
-            </div>
+                <button
+                  type="button"
+                  className="quick-add"
+                  onClick={() =>
+                    handleQuickAdd(product)
+                  }
+                >
+                  <span>
+                    Quick Add
+                  </span>
 
-            {/* Product Information */}
-            <div className="product-info">
+                  <span>
+                    +
+                  </span>
+                </button>
 
-              <div>
-                <p className="product-category">
-                  Women's Collection
-                </p>
-
-                <h3>
-                  {product.name}
-                </h3>
               </div>
 
-              {/* Price */}
-              <div className="price">
+              {/* PRODUCT INFO */}
 
-                <strong>
-                  ₹{product.price.toLocaleString("en-IN")}
-                </strong>
+              <div className="product-info">
 
-                {product.oldPrice && (
-                  <del>
-                    ₹{product.oldPrice.toLocaleString("en-IN")}
-                  </del>
-                )}
+                <div className="product-details">
 
-                {product.oldPrice > product.price && (
-                  <small>
-                    {Math.round(
-                      ((product.oldPrice - product.price) /
-                        product.oldPrice) *
-                        100
+                  <p className="product-category">
+                    Women's Collection
+                  </p>
+
+                  <h3>
+                    {product.name}
+                  </h3>
+
+                  {/* AVAILABLE SIZES */}
+
+                  <div className="product-available-sizes">
+                    {product.sizes?.map(
+                      (size) => (
+                        <span key={size}>
+                          {size}
+                        </span>
+                      )
                     )}
-                    % OFF
-                  </small>
-                )}
+                  </div>
+
+                </div>
+
+                {/* PRICE */}
+
+                <div className="price">
+
+                  <strong>
+                    ₹
+                    {Number(
+                      product.price
+                    ).toLocaleString(
+                      "en-IN"
+                    )}
+                  </strong>
+
+                  {product.oldPrice && (
+                    <del>
+                      ₹
+                      {Number(
+                        product.oldPrice
+                      ).toLocaleString(
+                        "en-IN"
+                      )}
+                    </del>
+                  )}
+
+                  {discount > 0 && (
+                    <small>
+                      {discount}% OFF
+                    </small>
+                  )}
+
+                </div>
 
               </div>
 
-            </div>
-
-          </article>
-        ))}
+            </article>
+          );
+        })}
 
       </div>
-
     </section>
   );
 };

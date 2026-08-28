@@ -30,6 +30,13 @@ const slides = [
     title: "GRACE",
     subtitle: "EFFORTLESSLY BEAUTIFUL",
   },
+   {
+    id: 5,
+    image: "/products/Home-4.png",
+    eyebrow: "SIGNATURE EDIT",
+    title: "GRACE",
+    subtitle: "BRAND OWNER",
+  },
 ];
 
 export default function Hero() {
