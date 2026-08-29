@@ -12,11 +12,11 @@ const categories = [
   },
   {
     name: "Salwar Suits",
-    image: "/products/product-3.jpg",
+    image: "/products/product-3.jpeg",
   },
   {
     name: "Salwar Suits",
-    image: "/products/product-4.jpg",
+    image: "/products/product-4.jpeg",
   },
   {
     name: "Salwar Suits",

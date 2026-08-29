@@ -43,7 +43,7 @@ const products = [
   {
     id: 3,
     name: "Royal Blue Handloom Pure Georgette Silk Banarasi Saree",
-    image: "/products/product-3.jpg",
+    image: "/products/product-3.jpeg",
     price: 1799,
     oldPrice: 3600,
     sizes: ["Free Size"],
@@ -53,7 +53,7 @@ const products = [
   {
     id: 4,
     name: "Orange Nafis Jaal Katan Silk Banarasi Saree",
-    image: "/products/product-4.jpg",
+    image: "/products/product-4.jpeg",
     price: 1799,
     oldPrice: 3600,
     sizes: ["Free Size"],
