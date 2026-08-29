@@ -5,8 +5,8 @@ const slides = [
   {
     id: 1,
     image: "/products/Home-4.png",
-    eyebrow: "SIGNATURE EDIT",
-    title: "GRACE",
+    eyebrow: "OWNER THIS BRAND ",
+    title: "OWNER THIS BRAND",
     subtitle: "BRAND OWNER",
   },
   {
